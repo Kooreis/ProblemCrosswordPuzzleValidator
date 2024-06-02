@@ -1,22 +1,11 @@
 ```C#
-using System;
-using System.Linq;
-
-class Program
+static bool ValidateCrossword(string[,] crossword)
 {
-    static void Main()
-    {
-        string[,] crossword = new string[5, 5]
-        {
-            { "a", "b", "c", "d", "e" },
-            { "f", "g", "h", "i", "j" },
-            { "k", "l", "m", "n", "o" },
-            { "p", "q", "r", "s", "t" },
-            { "u", "v", "w", "x", "y" }
-        };
+    int size = crossword.GetLength(0);
 
-        bool isValid = ValidateCrossword(crossword);
-        Console.WriteLine(isValid ? "Valid" : "Invalid");
+    if (size != crossword.GetLength(1))
+    {
+        return false;
     }
 }
 ```
