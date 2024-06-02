@@ -1,8 +1,8 @@
-import java.util.Scanner;
-
-public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the size of the crossword puzzle:");
-        int size = scanner.nextInt();
-        scanner.nextLine();
+char[][] crossword = new char[size][size];
+        System.out.println("Enter the crossword puzzle, line by line:");
+        for (int i = 0; i < size; i++) {
+            String line = scanner.nextLine();
+            for (int j = 0; j < size; j++) {
+                crossword[i][j] = line.charAt(j);
+            }
+        }
